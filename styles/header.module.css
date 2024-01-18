@@ -1,0 +1,84 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1e1f;
+  /* background-color: #222222f2; ფერი რომელიც უნდა გახდეს ჩამოსქროლვისას */
+  color: white;
+}
+
+nav {
+  width: 100%;
+  height: inherit;
+  max-width: var(--max-width);
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo_cont:hover {
+  cursor: pointer;
+}
+
+.header__menu_list {
+  display: none;
+}
+
+.header__burger_icon_cont {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+}
+.header__burger_icon {
+  height: 40%;
+  cursor: pointer;
+}
+
+/* tablet */
+@media screen and (min-width: 768px) {
+  .header__burger_icon_cont {
+    display: none;
+  }
+  .header__menu_list {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .header__menu_list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    transition: var(--transition);
+  }
+  .header__menu_list li:hover {
+    color: var(--tbc-main-color);
+    cursor: pointer;
+  }
+  /* დროებით აქვს მინიჭებული ჩაჰარდკოდებულად */
+  .header__menu_list_active {
+    color: var(--tbc-main-color);
+  }
+}
+
+/* SPECIAL FOR PADDING */
+@media screen and (min-width: 980px) {
+  nav {
+    padding: unset;
+  }
+}
