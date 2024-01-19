@@ -27,7 +27,7 @@
 
 .heading_section__text_box {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 26px;
   padding: var(--padding);
   display: flex;
   justify-content: center;
@@ -46,7 +46,7 @@
     font-size: 38px;
   }
   .heading_section__text_box p {
-    font-size: 26px;
+    font-size: 32px;
   }
 }
 

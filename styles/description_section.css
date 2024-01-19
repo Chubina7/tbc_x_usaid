@@ -1,0 +1,50 @@
+.description_section {
+  background-color: #2b2b2b;
+  color: white;
+  min-height: 464px;
+}
+
+.description_section__wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  line-height: 1.6em;
+  padding: 30px 0;
+}
+
+.description_section__wrapper p {
+  padding: var(--padding);
+}
+
+.description_section__wrapper button {
+  background: transparent;
+  font-family: inherit;
+  border: none;
+  color: var(--tbc-main-color);
+  font-size: 20px;
+  font-weight: bold;
+  padding: var(--padding);
+}
+/* Tableet */
+@media screen and (min-width: 768px) {
+  .description_section__wrapper {
+    font-size: 28px;
+  }
+}
+/* Laptop S */
+@media screen and (min-width: 1024px) {
+  .description_section__wrapper {
+    gap: 40px;
+    padding: unset;
+  }
+  .description_section__wrapper p,
+  .description_section__wrapper button {
+    padding: unset;
+  }
+}
