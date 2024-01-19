@@ -29,6 +29,11 @@
   font-size: 20px;
   font-weight: bold;
   padding: var(--padding);
+  transition: var(--transition);
+}
+.description_section__wrapper button:hover {
+  cursor: pointer;
+  color: #706a6a;
 }
 
 /* Tableet */

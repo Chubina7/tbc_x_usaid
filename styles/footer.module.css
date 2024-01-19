@@ -54,9 +54,14 @@
   color: inherit;
   border: none;
   border-radius: 6px;
-  cursor: pointer;
   width: 162px;
   height: 40px;
+  transition: var(--transition);
+}
+.footer__right_side button:hover {
+  cursor: pointer;
+  color: #2b2b2b;
+  background-color: #f4f4f4;
 }
 
 /* Mobile L */

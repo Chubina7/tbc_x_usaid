@@ -75,6 +75,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: var(--transition);
+}
+.courses_section__grid_item button:hover {
+  cursor: pointer;
+  color: var(--tbc-secondary-color);
 }
 
 /* Responsive */
