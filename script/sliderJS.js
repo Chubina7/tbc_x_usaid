@@ -1,9 +1,12 @@
 //// Bindings to the DOM elements
+const items = document.querySelector(".partners_section__slider_items")
 const groups = Array.from(document.querySelectorAll(".partners_section__slider_group"))
 const dots = Array.from(document.querySelectorAll(".partners_section__dot"))
 const leftArrow = document.querySelector(".partners_section__left_arrow")
 const rightArrow = document.querySelector(".partners_section__right_arrow")
 
+// Current shown
+let currentShownGroup = 0
 
 //// Manually change script
 
@@ -19,19 +22,28 @@ const isShownGroup = (id) => {
 
 // Clicking on the dot
 dots.forEach(dot => dot.addEventListener("click", (e) => {
-    isActiveDot(dots.indexOf(e.target))
-    isShownGroup(dots.indexOf(e.target))
+    let id = dots.indexOf(e.target)
+
+    isActiveDot(id)
+    isShownGroup(id)
+    currentShownGroup = id
+    items.style.transform = `translateX(-${currentShownGroup * 100}%)`
 }))
 
 // Clicking on the arrows
-rightArrow.addEventListener("click", () => console.log("clicked right one"))
-leftArrow.addEventListener("click", () => console.log("clicked left one"))
+rightArrow.addEventListener("click", () => {
+    console.log("clicked right one")
+})
+leftArrow.addEventListener("click", () => {
+
+    console.log("clicked left one")
+})
 
 
 //// Automatically change script
-let current = 0
 setInterval(() => {
-    current = (current + 1) % 3
-    isShownGroup(current)
-    isActiveDot(current)
-}, 2500);
+    currentShownGroup = (currentShownGroup + 1) % 3
+    isShownGroup(currentShownGroup)
+    isActiveDot(currentShownGroup)
+    items.style.transform = `translateX(-${currentShownGroup * 100}%)`
+}, 3000);
