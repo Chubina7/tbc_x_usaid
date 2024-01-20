@@ -1,0 +1,127 @@
+.partners_section {
+  position: relative;
+  background-color: #2b2b2b;
+  padding: 55px 0;
+}
+
+.partners_section__wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: var(--padding);
+}
+
+.partners_section__heading {
+  font-size: 18px;
+  padding-bottom: 50px;
+}
+
+/* Arrows */
+.partners_section__right_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 35px;
+  transition: var(--transition);
+
+  display: none;
+}
+.partners_section__left_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  width: 35px;
+  transition: var(--transition);
+
+  display: none;
+}
+.partners_section__left_arrow:hover,
+.partners_section__right_arrow:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+/* Slider */
+.partners_section__slider_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.partners_section__slider_wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.partners_section__slider_items {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, 33.33%);
+  grid-template-columns: repeat(3, 100%);
+}
+.partners_section__slider_item {
+  /* opacity: 0; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  transition: opacity 0.5s ease-in-out;
+}
+.active {
+  opacity: 1;
+}
+
+.partners_section__slider_items img {
+  width: 60%;
+  max-width: 200px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .partners_section__heading {
+    font-size: 24px;
+  }
+  .partners_section__slider_items {
+    grid-template-rows: repeat(1, 100%);
+    grid-template-columns: repeat(3, 33.33%);
+  }
+  .partners_section__slider_items img {
+    max-width: 230px;
+  }
+}
+
+/* Laptop S */
+@media screen and (min-width: 1024px) {
+  .partners_section__left_arrow,
+  .partners_section__right_arrow {
+    display: block;
+  }
+  .partners_section__wrapper {
+    padding: unset;
+  }
+}
+
+/* SPECIAL BP FOR ARROWS */
+@media screen and (min-width: 1200px) {
+  .partners_section__left_arrow {
+    left: 80px;
+  }
+  .partners_section__right_arrow {
+    right: 80px;
+  }
+}
+
+/* Laptop L */
+@media screen and (min-width: 1440px) {
+  .partners_section__left_arrow {
+    left: 120px;
+  }
+  .partners_section__right_arrow {
+    right: 120px;
+  }
+}
