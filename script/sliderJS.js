@@ -8,7 +8,7 @@ const rightArrow = document.querySelector(".partners_section__right_arrow")
 // Current shown
 let currentShownGroup = 0
 
-//// Manually change script
+//// Manually changeing script
 
 // functions
 const isActiveDot = (id) => {
@@ -19,28 +19,33 @@ const isShownGroup = (id) => {
     groups.forEach(group => group.classList.remove("active_shown"))
     groups[id].classList.add("active_shown")
 }
+const transformation = (current) => {
+    items.style.transform = `translateX(-${current * 100}%)`
+}
 
 // Clicking on the dot
 dots.forEach(dot => dot.addEventListener("click", (e) => {
-    let id = dots.indexOf(e.target)
-
-    isActiveDot(id)
-    isShownGroup(id)
-    currentShownGroup = id
-    items.style.transform = `translateX(-${currentShownGroup * 100}%)`
+    currentShownGroup = dots.indexOf(e.target)
+    isActiveDot(currentShownGroup)
+    isShownGroup(currentShownGroup)
+    transformation(currentShownGroup)
 }))
 
 // Clicking on the arrows
 rightArrow.addEventListener("click", () => {
-    console.log("clicked right one")
+    currentShownGroup = (currentShownGroup + 1) % 3
+    isActiveDot(currentShownGroup)
+    isShownGroup(currentShownGroup)
+    transformation(currentShownGroup)
 })
 leftArrow.addEventListener("click", () => {
-
-    console.log("clicked left one")
+    currentShownGroup = (currentShownGroup === 0) ? 2 : currentShownGroup - 1;
+    isActiveDot(currentShownGroup)
+    isShownGroup(currentShownGroup)
+    transformation(currentShownGroup)
 })
 
-
-//// Automatically change script
+//// Automatically changeing script
 setInterval(() => {
     currentShownGroup = (currentShownGroup + 1) % 3
     isShownGroup(currentShownGroup)
