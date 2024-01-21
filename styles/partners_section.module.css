@@ -13,6 +13,7 @@
 .partners_section__heading {
   font-size: 18px;
   padding-bottom: 50px;
+  color: #dbdbdbdb;
 }
 
 /* Arrows */
@@ -60,8 +61,6 @@
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: repeat(3, 100%);
-
-  /* transform: translateX(-100%); */
 }
 .partners_section__slider_group {
   opacity: 10%;

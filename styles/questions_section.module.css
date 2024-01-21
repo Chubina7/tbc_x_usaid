@@ -1,0 +1,114 @@
+.questions_section {
+  background-color: #161616;
+  padding: 50px 0;
+}
+.questions_section__wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--padding);
+  gap: 30px;
+}
+
+/* Heading */
+.questions_section__heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.questions_section__heading h1 {
+  font-size: 16px;
+  color: #dbdbdbdb;
+}
+.questions_section__heading button {
+  background: transparent;
+  font-family: inherit;
+  border: none;
+  color: var(--tbc-main-color);
+  font-weight: bold;
+  font-size: 14px;
+  transition: var(--transition);
+  display: none;
+}
+.questions_section__heading button:hover {
+  color: #dbdbdb;
+  cursor: pointer;
+}
+.questions_section__all_questions_btn {
+  background: transparent;
+  font-family: inherit;
+  border: none;
+  color: var(--tbc-main-color);
+  font-weight: bold;
+  font-size: 14px;
+  transition: var(--transition);
+}
+.questions_section__all_questions_btn:hover {
+  color: #dbdbdb;
+  cursor: pointer;
+}
+
+/* Accordion */
+.questions_section__accordion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.questions_section__accordion_item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #2b2b2be4;
+  padding: 20px 0;
+}
+.questions_section__question_bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.questions_section__question_bar p {
+  font-size: 20px;
+}
+.questions_section__question_bar img {
+  margin-left: 20px;
+  width: 20px;
+}
+.questions_section__answer_bar {
+  width: 100%;
+}
+.questions_section__answer_bar p {
+  font-size: 14px;
+  line-height: 1.8em;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .questions_section__all_questions_btn {
+    display: none;
+  }
+  .questions_section__heading button {
+    display: block;
+  }
+  .questions_section__heading h1 {
+    font-size: 24px;
+  }
+}
+
+/* SPECIAL FOR PADDING */
+@media screen and (min-width: 1010px) {
+  .questions_section__wrapper {
+    padding: unset;
+  }
+}
