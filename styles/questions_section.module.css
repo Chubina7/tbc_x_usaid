@@ -87,10 +87,16 @@
 }
 .questions_section__answer_bar {
   width: 100%;
+
+  display: none;
 }
 .questions_section__answer_bar p {
   font-size: 14px;
   line-height: 1.8em;
+}
+/* active states */
+.active_item {
+  display: block;
 }
 
 /* Tablet */
