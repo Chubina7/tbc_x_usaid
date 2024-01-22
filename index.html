@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles/globall.css">
     <!-- module styles -->
     <link rel="stylesheet" href="./styles/header.module.css">
+    <link rel="stylesheet" href="./styles/burger_menu.css">
     <link rel="stylesheet" href="./styles/heading_section.module.css">
     <link rel="stylesheet" href="./styles/description_section.module.css">
     <link rel="stylesheet" href="./styles/courses_section.module.css">
@@ -103,6 +104,17 @@
             <div class="header__burger_icon_cont">
                 <img src="./assets/svg/burger_menu_logo.svg" alt="burger" class="header__burger_icon">
             </div>
+            <!-- Burger Menu -->
+            <div class="header__burger_menu__overlay"></div>
+            <sidebar class="header__burger_menu__nav">
+                <img src="./assets/svg/cancel_icon.svg" alt="x" class="header__burger_menu__x_btn">
+                <ul class="header__burger_menu_list">
+                    <li>მთავარი</li>
+                    <li>TBC IT</li>
+                    <li class="header__menu_list_active">TBC x USAID</li>
+                    <li>რისკები</li>
+                </ul>
+            </sidebar>
         </nav>
     </header>
 
@@ -471,6 +483,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="./script/burger_menu.js"></script>
     <script src="./script/sliderJS.js"></script>
     <script src="./script/accordion.js"></script>
 </body>

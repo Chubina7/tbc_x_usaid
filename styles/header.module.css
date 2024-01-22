@@ -71,7 +71,6 @@ nav {
     color: var(--tbc-main-color);
     cursor: pointer;
   }
-  /* დროებით აქვს მინიჭებული ჩაჰარდკოდებულად */
   .header__menu_list_active {
     color: var(--tbc-main-color);
   }

@@ -1,0 +1,124 @@
+.header__burger_menu__overlay {
+  z-index: 101;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #00000074;
+  height: 100vh;
+  width: 100%;
+
+  display: none;
+}
+
+.header__burger_menu__overlay.fade-in {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.header__burger_menu__overlay.fade-out {
+  animation: fadeOut 0.25s ease-in-out;
+}
+
+.header__burger_menu__nav {
+  user-select: none;
+  z-index: 102;
+  position: absolute;
+  z-index: 101;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 30px 0 0 30px;
+  background-color: #101111;
+
+  display: none;
+}
+
+.header__burger_menu__nav.slide-in {
+  animation: slideIn 0.25s ease-in-out;
+}
+
+.header__burger_menu__nav.slide-out {
+  animation: slideOut 0.25s ease-in-out;
+}
+
+.header__burger_menu__x_btn {
+  width: 22px;
+  margin-right: 30px;
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.header__burger_menu_list {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 5px 0 50px;
+  font-size: 14px;
+}
+
+/* Item */
+.header__burger_menu_list li {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  transition: var(--transition);
+}
+.header__burger_menu_list li:hover {
+  color: var(--tbc-main-color);
+  cursor: pointer;
+}
+.header__menu_list_active {
+  color: var(--tbc-main-color);
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+  .header__burger_menu__overlay,
+  .header__burger_menu__nav {
+    display: none;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
